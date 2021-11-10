@@ -9,14 +9,14 @@ const {
 const {
     json
 } = require("express");
-const userRoutes = require("./routes/userroutes.js")
-const reviewRoutes = require("./routes/reviewroutes.js")
-const categoryRoutes = require("./routes/categoryroutes.js")
-const productRoutes = require("./routes/productroutes.js")
-const orderRoutes = require("./routes/orderroutes")
-const userrRoutes = require("./routes/userroutes")
-const cartRoutes = require("./routes/cartroutes")
-const adminroutes = require("./routes/adminroutes.js")
+const userRoutes = require("./routes/user_routes.js")
+const reviewRoutes = require("./routes/review_routes.js")
+const categoryRoutes = require("./routes/category_routes.js")
+const productRoutes = require("./routes/product_routes.js")
+const orderRoutes = require("./routes/order_routes")
+const userrRoutes = require("./routes/user_routes")
+const cartRoutes = require("./routes/cart_routes")
+const adminroutes = require("./routes/admin_routes.js")
 
 // require("dotenv").config({ path: './config.env'});
 dotenv.config({

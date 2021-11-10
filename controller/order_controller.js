@@ -53,9 +53,9 @@ const createorder = (req, res) => {
     var date = today.getFullYear() + '-' + (today.getMonth() + 1) + '-' + today.getDate();
     var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
     var created_at = date + ' ' + time;
-    const payment_status = 'Success';
-    const order_status = 'Ordered';
-    const delivered_at = created_at;
+    let payment_status = 'Success';
+    let order_status = 'Ordered';
+    let delivered_at = created_at;
     pool.query(queries.createorder, [user_id, order_address, product_id, created_at, quantity, order_status, created_at, total_price, shipping_price, delivered_at, pay_through, payment_status, payment_reference], (error, results) => {
         if (error) throw error;
         res.send("Order created successfully")

@@ -7,6 +7,9 @@
 
 
 const getProducts = "SELECT * FROM products";
+
+
+
 const getProductsById = "select * from products where product_id =$1";
 const getproductbyname ="select * from products where product_name=$1";
 const checkproductnameexists = "select * from products where  product_name=$1";

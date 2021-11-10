@@ -5,13 +5,13 @@ const query = require('../queries.js');
 
 
 
-pool.connect((error) => {
-    if (error) {
-        console.log(result);
-    } else {
-        console.log("Connected to PSQL");
-    }
-})
+// pool.connect((error) => {
+//     if (error) {
+//         console.log(result);
+//     } else {
+//         console.log("Connected to PSQL");
+//     }
+// })
 
 // router.get('/',(req,res)=>{
 // res.send("Creating cart");

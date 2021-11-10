@@ -3,7 +3,7 @@ const {Router} = require ("express");
 const router = Router();
 const {Authentication}=require("../middleware/auth.js")
 
-const controller = require("../controller/reviewcontroller")
+const controller = require("../controller/review_controller")
 
 router.get('/product_id/reviews',[Authentication.verifytoken],controller.getreviews);
 router.post('/product_id/review',[Authentication.verifytoken],controller.addreview);

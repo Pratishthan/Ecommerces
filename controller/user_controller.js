@@ -2,7 +2,7 @@ const express = require('express');
 const queries = require('../queries');
 const db = require("../dbconfig")
 const app = express();
-const routes = require('../routes/userroutes');
+const routes = require('../routes/user_routes');
 const bodyParser = require('body-parser');
 
 const {
@@ -23,12 +23,12 @@ const userSignUp = (req, res) => {
     const user_role='Normaluser';
     req.body.password = hashSync(req.body.password, salt);
 
-    const fname = req.body.firstName;
-    const lname = req.body.lastName;
-    const gender = req.body.gender;
-    const email = req.body.email;
-    const password = req.body.password;
-    const phone = req.body.phone_number;
+    let fname = req.body.firstName;
+    let lname = req.body.lastName;
+    let gender = req.body.gender;
+    let email = req.body.email;
+    let password = req.body.password;
+    let phone = req.body.phone_number;
 
 
 
@@ -46,7 +46,7 @@ const userSignUp = (req, res) => {
 
 const userSignIn = (req, res) => {
 
-    const {
+    let {
         email,
         password
     } = req.body;
@@ -79,11 +79,11 @@ const userSignIn = (req, res) => {
 }
 
 const userUpdate = (req, res) => {
-    const fname = req.body.firstName;
-    const lname = req.body.lastName;
-    const email = req.body.email;
-    const password = req.body.password;
-    const phone = req.body.phone_number;
+    let fname = req.body.firstName;
+    let lname = req.body.lastName;
+    let email = req.body.email;
+    let password = req.body.password;
+    let phone = req.body.phone_number;
 
     var id = 0;
     //Get ID of user which needs to be updated

@@ -2,7 +2,7 @@ const express = require('express');
 const queries = require('../queries');
 const pool = require("../dbconfig")
 const app = express();
-const routes = require('../routes/adminroutes');
+const routes = require('../routes/admin_routes');
 const bodyParser = require('body-parser');
 
 const {

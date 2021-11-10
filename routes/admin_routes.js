@@ -14,7 +14,7 @@
 // module.exports = router;
 
 
-const controller = require("../controller/admincontroller")
+const controller = require("../controller/admin_controller")
 
 const {Adminauthentication}=require("../middleware/admin")
 

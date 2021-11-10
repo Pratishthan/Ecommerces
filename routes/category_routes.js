@@ -1,5 +1,5 @@
 const Router= require('express');
-const controller = require("../controller/categorycontroller")
+const controller = require("../controller/category_controller")
 const router=Router();
 const {Adminauthentication}=require("../middleware/admin")
 router.get('/',[Adminauthentication.verifyadmin],controller.getAllcategory);

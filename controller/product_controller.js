@@ -24,7 +24,7 @@ const getProductsById = (req, res) => {
 }
 
 const getproductbyname = (req, res) => {
-    const pro_name = req.params.product_name;
+    let pro_name = req.params.product_name;
     // query.getproductbyname += "'"+pro_name+"'"+";";
     // console.log(query.getproductbyname);
     pool.query(queries.getproductbyname, [pro_name], (error, results) => {
@@ -41,7 +41,7 @@ const getproductbyname = (req, res) => {
 }
 
 const addProduct = (req, res) => {
-    const {
+    let {
         product_name,
         price,
         product_details,
@@ -70,7 +70,7 @@ const addProduct = (req, res) => {
 
 const deleteproductId = (req, res) => {
 
-    const pro_id = parseInt(req.params.pro_id);
+    let pro_id = parseInt(req.params.pro_id);
 
     pool.query(queries.getProductsById, [pro_id], (error, results) => {
         if (!results.rows.length) {
@@ -88,7 +88,7 @@ const deleteproductId = (req, res) => {
 
 const updateproduct = (req, res) => {
 
-    const pro_id = parseInt(req.params.pro_id);
+    let pro_id = parseInt(req.params.pro_id);
     const {
         product_name,
         price,

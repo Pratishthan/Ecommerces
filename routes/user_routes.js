@@ -14,7 +14,7 @@
 // module.exports = router;
 
 
-const controller = require("../controller/usercontroller")
+const controller = require("../controller/user_controller")
 
 const {Authentication}=require("../middleware/auth.js")
 

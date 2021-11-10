@@ -19,6 +19,9 @@ const Pool  = require("pg").Pool;
 //     password : "Muks@0621",
 //     port : 5432
 // })
+
+
+
 const pool= new Pool({
     user:"postgres",
     host:"localhost",
@@ -28,4 +31,13 @@ const pool= new Pool({
     
     
     });
+
+
+    pool.connect((error) => {
+        if (error) {
+            console.log(result);
+        } else {
+            console.log("Connected to PSQL");
+        }
+    })
 module.exports = pool;

@@ -1,7 +1,7 @@
 const {Router} = require ("express");
 
 const router = Router();
-const controller = require("../controller/productcontroller")
+const controller = require("../controller/product_controller")
 const {Adminauthentication}=require("../middleware/admin")
 
 router.get ("/",[Adminauthentication.verifyadmin], controller.getProducts);

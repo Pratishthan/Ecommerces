@@ -11,7 +11,7 @@ const getreviews = (req, res) => {
 }
 
 const addreview = (req, res) => {
-    const {
+    let {
         user_id,
         product_id,
         rating,
@@ -32,9 +32,9 @@ const addreview = (req, res) => {
 
 const updatereview = (req, res) => {
 
-    const pro_id = parseInt(req.params.product_id);
-    const rev_id = parseInt(req.params.review_id);
-    const {
+    let pro_id = parseInt(req.params.product_id);
+    let rev_id = parseInt(req.params.review_id);
+    let {
         token,
         rating,
         review
@@ -54,7 +54,7 @@ const updatereview = (req, res) => {
 
 const deletereviewId = (req, res) => {
 
-    const pro_id = parseInt(req.params.product_id);;
+    let pro_id = parseInt(req.params.product_id);;
 
     pool.query(query.getproductbyId, [pro_id], (error, results) => {
         if (error) {
